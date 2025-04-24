@@ -114,4 +114,18 @@ select * from products where categoryid NOT  IN (1,2,3);
 select * from customers where company_name like 'A%';
 
 *********************************************************************************************************************************************************
---8 
+--8 INSERT into orders table:
+--Add a new order to the orders table with the following details:
+
+INSERT INTO orders (orderid,customerid,employeeid,orderdate,requireddate,shippeddate,shipperid,freight) 
+	   values(11078,'ALFKI',5,'2025-04-23','2025-04-30','2025-04-25',2,45.50);
+
+	   select * from orders where orderid ='11078';
+
+**********************************************************************************************************************************************************
+--9 Increase(Update)  the unit price of all products in category_id =2 by 10%.
+ update products
+ set unitprice = unitprice *1.10
+ where categoryid = 2
+
+ select * from products where categoryid = 2 
